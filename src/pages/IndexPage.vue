@@ -1,11 +1,12 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="flex flex-center column">
     <img
       alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
+      src="~assets/logoNasa.png"
       style="width: 200px; height: 200px"
     >
-    hola MUndo!!!!
+
+    Prueba de PWA para nuevo sistema
   </q-page>
 </template>
 

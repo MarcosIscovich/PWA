@@ -53,10 +53,10 @@ const linksList = [
     link: "https://github.com/quasarframework",
   },
   {
-    title: "Discord Chat Channel",
+    title: "Ir a central Nuclear Embalse",
     caption: "chat.quasar.dev",
     icon: "chat",
-    link: "https://chat.quasar.dev",
+    link: "https://www.na-sa.com.ar/",
   },
   {
     title: "Forum",
