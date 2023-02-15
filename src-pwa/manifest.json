@@ -1,7 +1,13 @@
 {
+  "id": "pwa-frontend",
+  "name": "Pwa-FrontEnd",
+  "short_name": "pwa-frontend",
+  "description": "pruebas de pwa",
+  "display": "standalone",
+  "start_url": "/",
   "orientation": "portrait",
   "background_color": "#ffffff",
-  "theme_color": "#027be3",
+  "theme_color": "#3120e0",
   "icons": [
     {
       "src": "icons/icon-128x128.png",
@@ -23,10 +29,6 @@
       "sizes": "384x384",
       "type": "image/png"
     },
-    {
-      "src": "icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "icons/icon-512x512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }

@@ -51,6 +51,7 @@ module.exports = configure(function (/* ctx */) {
 
       'roboto-font', // optional, you are not bound to it
       'material-icons', // optional, you are not bound to it
+      'mdi-v5',
     ],
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#build
@@ -106,7 +107,9 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Notify',
+      ]
     },
 
     // animations: 'all', // --- includes all animations
@@ -149,6 +152,7 @@ module.exports = configure(function (/* ctx */) {
     // https://v2.quasar.dev/quasar-cli/developing-pwa/configuring-pwa
     pwa: {
       workboxMode: 'generateSW', // or 'injectManifest'
+      workboxOptions: { skipWaiting: true , clientsClaim: true  }, // only for generateSW
       injectPwaMetaTags: true,
       swFilename: 'sw.js',
       manifestFilename: 'manifest.json',
@@ -195,7 +199,7 @@ module.exports = configure(function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'front-end'
+        appId: 'pwa-frontend'
       }
     },
 

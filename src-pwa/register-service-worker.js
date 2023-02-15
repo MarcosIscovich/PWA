@@ -1,3 +1,4 @@
+import { Notify } from 'quasar'
 import { register } from 'register-service-worker'
 
 // The ready(), registered(), cached(), updatefound() and updated()
@@ -28,7 +29,16 @@ register(process.env.SERVICE_WORKER_FILE, {
   },
 
   updated (/* registration */) {
-    // console.log('New content is available; please refresh.')
+    Notify.create({
+      message: 'New content is available; please refresh.',
+      icon: 'mdi-cloud_download',
+      closeBtn: 'Refresh',
+      timeout: 10000,
+      onDismiss () {
+        location.reload(true)
+      }
+    })
+      
   },
 
   offline () {
