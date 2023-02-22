@@ -39,7 +39,91 @@
     icon: "mdi-alert-octagon",
     value: "123",
   },
-  
+  {
+    title: "variable 6",
+    icon: "mdi-alien",
+    value: "123",
+  },
+  {
+    title: "variable 7",
+    icon: "mdi-alien-outline",
+    value: "123",
+  },
+  {
+    title: "variable 8",
+    icon: "mdi-alien-outline",
+    value: "123",
+  },
+  {
+    title: "variable 9",
+    icon: "mdi-alien",
+    value: "123",
+  },
+  {
+    title: "variable 10",
+    icon: "mdi-alien-outline",
+    value: "123",
+  },
+  {
+    title: "variable 11",
+    icon: "mdi-alien",
+    value: "123",
+  },
+  {
+    title: "variable 12",
+    icon: "mdi-alien-outline",
+    value: "123",
+  },
+  {
+    title: "variable 13",
+    icon: "mdi-alien",
+    value: "123",
+  },
+  {
+    title: "variable 14",
+    icon: "mdi-alien-outline",
+    value: "123",
+  },
+  {
+    title: "variable 15",
+    icon: "mdi-alien",
+    value: "123",
+  },
+  {
+    title: "variable 16",
+    icon: "mdi-alien-outline",
+    value: "123",
+  },
+  {
+    title: "variable 17",
+    icon: "mdi-alien",
+    value: "123",
+  },
+  {
+    title: "variable 18",
+    icon: "mdi-alien-outline",
+    value: "123",
+  },
+  {
+    title: "variable 19",
+    icon: "mdi-alien",
+    value: "123",
+  },
+  {
+    title: "variable 20",
+    icon: "mdi-alien-outline",
+    value: "123",
+  },
+  {
+    title: "variable 21",
+    icon: "mdi-alien",
+    value: "123",
+  },
+  {
+    title: "variable 22",
+    icon: "mdi-alien-outline",
+    value: "123",
+  },  
 ]
 
 const onSubmit = (evt) => {
