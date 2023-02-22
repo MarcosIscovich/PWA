@@ -1,43 +1,9 @@
-<template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title> Prueba PWA segunda version </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
-
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
-        <q-item-label header> Links de redireccionamiento </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
-
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-  </q-layout>
-</template>
-
-<script>
+<script setup >
 import { defineComponent, ref } from "vue";
-import EssentialLink from "components/EssentialLink.vue";
+import { useQuasar } from "quasar";
+
+const $q = useQuasar();
+const menuDrawer = ref(false);
 
 const linksList = [
   {
@@ -84,23 +50,56 @@ const linksList = [
   },
 ];
 
-export default defineComponent({
-  name: "MainLayout",
 
-  components: {
-    EssentialLink,
-  },
 
-  setup() {
-    const leftDrawerOpen = ref(false);
+const openPage = () => {
+  $q.dialog({
+    title: "Funciona el boton",
+    message: "Este boton si funciona",
+  });
+};
 
-    return {
-      essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
-    };
-  },
-});
 </script>
+
+<template>
+  <q-layout view="lHh Lpr lFf">
+    <q-header elevated>
+      <q-toolbar>
+        <div class="q-mt-md row ">
+          <q-fab
+            v-model="menuDrawer"
+            label="Actions"
+            label-position="bottom"
+            vertical-actions-align="left"
+            color="white"
+            icon="keyboard_arrow_down"
+            direction="down"
+            flat
+            
+          >
+            <q-fab-action  color="primary" @click="openPage" icon="mail" label="Nueva Rutina" />
+            <q-fab-action  color="secondary" @click="openPage" icon="alarm" label="Editar Variable" />
+            <q-fab-action  color="orange" @click="openPage" icon="airplay" label="Buscar Rutina" />
+            <q-fab-action  color="accent" @click="openPage" icon="room" label="Nueva Medición" />
+          </q-fab>
+        </div>
+
+        <q-toolbar-title> Nuevo sistema de Mediciones </q-toolbar-title>
+
+        <div>Quasar v{{ $q.version }}</div>
+      </q-toolbar>
+    </q-header>
+
+    <!-- <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+      <q-list>
+        <q-item-label header> Links de redireccionamiento </q-item-label>
+
+        <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
+      </q-list>
+    </q-drawer> -->
+
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+  </q-layout>
+</template>
