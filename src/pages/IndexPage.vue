@@ -16,122 +16,34 @@
   const variables = [
   {
     title: "variable 1",
-    icon: "school",
+    icon: "mdi-account-convert",
     value: "1",
   },
   {
     title: "variable 2",
-    icon: "school",
+    icon: "mdi-account-cowboy-hat",
     value: "23",
   },
   {
     title: "variable 3",
-    icon: "school",
+    icon: "mdi-air-horn",
     value: "65",
   },
   {
     title: "variable 4",
-    icon: "school",
+    icon: "mdi-alarm-bell",
     value: "12",
   },
   {
     title: "variable 5",
-    icon: "school",
+    icon: "mdi-alert-octagon",
     value: "123",
   },
-  {
-    title: "variable 6",
-    icon: "school",
-    value: "55",
-  },
-  {
-    title: "variable 7",
-    icon: "school",
-    value: "78",
-  },
-  {
-    title: "variable 8",
-    icon: "school",
-    value: "32",
-  },
-  {
-    title: "variable 9",
-    icon: "school",
-    value: "687",
-  },
-  {
-    title: "variable 10",
-    icon: "school",
-    value: "78",
-  },
-  {
-    title: "variable 11",
-    icon: "school",
-    value: "565",
-  },
-  {
-    title: "variable 12",
-    icon: "school",
-    value: "43",
-  },
-  {
-    title: "variable 13",
-    icon: "school",
-    value: "8908",
-  },
-  {
-    title: "variable 14",
-    icon: "school",
-    value: "98",
-  },
-  {
-    title: "variable 15",
-    icon: "school",
-    value: "676",
-  },
-  {
-    title: "variable 16",
-    icon: "school",
-    value: "456",
-  },
-  {
-    title: "variable 17",
-    icon: "school",
-    value: "565",
-  },
-  {
-    title: "variable 18",
-    icon: "school",
-    value: "23",
-  },
-  {
-    title: "variable 19",
-    icon: "school",
-    value: "09",
-  },
-  {
-    title: "variable 20",
-    icon: "school",
-    value: "23",
-  },
-  {
-    title: "variable 21",
-    icon: "school",
-    value: "08",
-  },
-  {
-    title: "variable 22",
-    icon: "school",
-    value: "23",
-  },
-  {
-    title: "variable 23",
-    icon: "school",
-    value: "34",
-  },
+  
 ]
 
 const onSubmit = (evt) => {
+  e.preventDefault();
   console.log("Submit" , variables)
 }
 
@@ -158,7 +70,12 @@ const onReset = (evt) => {
         
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Please type something']"
+      >
+      <q-icon
+        :name="variable.icon"
       />
+
+      </q-input>
 
       <div class="flex justify-end">
         <q-btn label="Submit" type="submit" color="primary"/>
