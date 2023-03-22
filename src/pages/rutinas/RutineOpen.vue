@@ -419,12 +419,14 @@ const dataSist = (value) => {
       <q-expansion-item
         v-for="sist in sistemas"
         :key="sist.id"
-        class="bg-grey-1 text-black q-mb-sm q-pa-sm rounded-borders shadow-2 hover-shadow-3"
-        group="somegroup"
+        class="bg-indigo-1 text-black q-mb-sm q-pa-sm rounded-borders shadow-2 "
+
         icon="mdi-facebook-workplace"
         :label="sist.nombreSist"
         header-class="expansionClass"
       >
+      <!-- agregar para que solo se despliegue un expand a la vez
+      group="somegroup" -->
         <q-card flat>
           <q-card-section>
             <q-table :rows="sistemas" :columns="columns" :pagination="pagination" :rows-key="sist.id" separator="horizontal">
@@ -443,23 +445,23 @@ const dataSist = (value) => {
                           <span class="q-ml-sm">{{ col.variable }}</span>
                         </q-chip>
                       </div>
-                      <div v-if="colTd.name == 'unidad_medicion'">
+                      <div v-if="colTd.name == 'unidad_medicion'" class="flex justify-center">
                         <span style="font-size: 20px; font-weight: 500; color: black">{{ col.unidad_medida }} </span>
                       </div>
 
-                      <div v-if="colTd.name == 'desde_hasta'">
+                      <div v-if="colTd.name == 'desde_hasta'" class="flex justify-center">
                         <span style="font-size: 20px; font-weight: 500; color: black">{{ col.desde_hasta }}</span>
                       </div>
 
-                      <div v-if="colTd.name == 'valor_normal'">
+                      <div v-if="colTd.name == 'valor_normal'" class="flex justify-center">
                         <span style="font-size: 20px; font-weight: 500; color: black">{{ col.valor_normal }}</span>
                       </div>
 
-                      <div v-if="colTd.name == 'valor_anterior'">
+                      <div v-if="colTd.name == 'valor_anterior'" class="flex justify-center">
                         <span style="font-size: 20px; font-weight: 500; color: black">{{ col.valor_anterior }}</span>
                       </div>
 
-                      <div v-if="colTd.name == 'medicion'">
+                      <div v-if="colTd.name == 'medicion'" class="flex justify-center">
                         <q-input outlined rounded style="width: 80px" dense type="number" color="positive" v-model="col.medicion" />
                       </div>
                       <!-- <div v-if="colTd.name == 'observacion'">
@@ -557,4 +559,8 @@ const dataSist = (value) => {
   font-weight: bold;
   color: black;
 }
+
+
+
+
 </style>
