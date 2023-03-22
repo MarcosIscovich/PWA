@@ -385,7 +385,7 @@ onMounted(() => {
       </div>
     </div>
 
-    <q-dialog v-model="dialog" persistent transition-show="jump-up" >
+    <q-dialog v-model="dialog" persistent transition-show="jump-up">
       <q-card class="cardClass">
         <!--   <q-item>
            <q-item-section avatar>
@@ -432,7 +432,7 @@ onMounted(() => {
 
             <div class="row q-ma-sm">
               <div class="col-5">
-                <span class="variCLass flex justify-center">Valor Desde/Hasta</span>
+                <span class="variCLass flex justify-center">Valores Desde/Hasta</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
               <div class="col-5 q-ml-md">
@@ -474,7 +474,7 @@ onMounted(() => {
                 <span class="variCLass flex justify-center">Medición</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
-              <div class="col-5">
+              <div class="col-3">
                 <q-input outlined v-model="dataVar.medicion" type="number" class="q-ml-md" rounded>
                   <template v-slot:append>
                     <q-avatar>
@@ -483,24 +483,32 @@ onMounted(() => {
                   </template>
                 </q-input>
               </div>
+              <div class="col-1 flex justify-center content-center q-ml-md">
+                <q-icon color="primary" size="sm" name="mdi-content-copy"></q-icon>
+              </div>
+              <div class="col-2 flex justify-center content-center">
+                <span style="font-size: 12px; font-weight: 500; color: black">Copiar valor anterior</span>
+              </div>
             </div>
 
             <div class="row q-ma-sm">
               <div class="col-5 flex justify-center content-center">
-                <span class="variCLass">Observacion</span>
+                <span class="variCLass">Observación</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
               <div class="col-5">
                 <q-input class="q-ml-md" type="textarea" outlined rounded> </q-input>
               </div>
             </div>
-            <q-card-actions class="flex justify-evenly">
+            <q-separator size="2px" color="blue" />
+            <q-card-actions class="flex justify-around">
               <q-btn class="q-ma-sm btnColotAzul" label="Pendiente" @click="onDialogCancel" />
               <q-btn class="q-ma-sm btnColotAzul" color="primary" label="Guardar" @click="onDialogCancel" />
             </q-card-actions>
           </q-card>
         </q-card-section>
       </q-card>
+
     </q-dialog>
   </q-responsive>
 </template>

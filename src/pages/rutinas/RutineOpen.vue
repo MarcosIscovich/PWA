@@ -342,6 +342,14 @@ const columns = ref([
     headerStyle: "width: auto",
   },
   {
+    name: "unidad_medicion",
+    label: "Unidad de Medición",
+    field: "",
+    align: "center",
+    sortable: true,
+    headerStyle: "width: auto",
+  },
+  {
     name: "desde_hasta",
     label: "Valor desde - hasta",
     field: "desde_hasta",
@@ -350,17 +358,17 @@ const columns = ref([
     headerStyle: "width: 100px",
   },
   {
-    name: "valor_anterior",
-    label: "valor anterior",
-    field: "valor_anterior",
+    name: "valor_normal",
+    label: "Valor Normal",
+    field: "valor_normal",
     align: "center",
     sortable: true,
     headerStyle: "width: 100px",
   },
   {
-    name: "valor_normal",
-    label: "valor Normal",
-    field: "valor_normal",
+    name: "valor_anterior",
+    label: "Valor Anterior",
+    field: "valor_anterior",
     align: "center",
     sortable: true,
     headerStyle: "width: 100px",
@@ -435,18 +443,24 @@ const dataSist = (value) => {
                           <span class="q-ml-sm">{{ col.variable }}</span>
                         </q-chip>
                       </div>
-                      <div v-if="colTd.name == 'desde_hasta'">
-                        {{ col.desde_hasta }}
+                      <div v-if="colTd.name == 'unidad_medicion'">
+                        <span style="font-size: 20px; font-weight: 500; color: black">{{ col.unidad_medida }} </span>
                       </div>
-                      <div v-if="colTd.name == 'valor_anterior'">
-                        {{ col.valor_anterior }}
+
+                      <div v-if="colTd.name == 'desde_hasta'">
+                        <span style="font-size: 20px; font-weight: 500; color: black">{{ col.desde_hasta }}</span>
                       </div>
 
                       <div v-if="colTd.name == 'valor_normal'">
-                        {{ col.valor_normal }}
+                        <span style="font-size: 20px; font-weight: 500; color: black">{{ col.valor_normal }}</span>
                       </div>
+
+                      <div v-if="colTd.name == 'valor_anterior'">
+                        <span style="font-size: 20px; font-weight: 500; color: black">{{ col.valor_anterior }}</span>
+                      </div>
+
                       <div v-if="colTd.name == 'medicion'">
-                        <q-input outlined style="width: 80px" dense type="number" color="positive" v-model="col.medicion" />
+                        <q-input outlined rounded style="width: 80px" dense type="number" color="positive" v-model="col.medicion" />
                       </div>
                       <!-- <div v-if="colTd.name == 'observacion'">
                         {{ col?.variable?.observacion ? col?.variable?.observacion : 'click para agregar observación' }}
