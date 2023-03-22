@@ -51,6 +51,7 @@ onMounted(() => {
           </q-fab>
         </div> -->
         <q-btn flat @click="menuDrawer = !menuDrawer" round dense icon="menu" />
+        
         <q-toolbar-title>Mediciones </q-toolbar-title>
 
         <div>

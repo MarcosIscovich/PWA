@@ -474,19 +474,19 @@ onMounted(() => {
                 <span class="variCLass flex justify-center">Medición</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
-              <div class="col-5">
+              <div class="col-6">
                 <q-input outlined v-model="dataVar.medicion" type="number" class="q-ml-md" rounded>
                   <template v-slot:append>
                     <q-avatar>
-                      <q-img src="src/assets/logoNasa.png" />
+                      <q-img src="../../assets/logoNasa.png" />
                     </q-avatar>
                   </template>
                 </q-input>
               </div>
-              <div class="col-1 flex justify-center content-center q-ml-md">
-                <q-icon color="primary" size="sm" name="mdi-content-copy"></q-icon>
-              </div>
-              
+             <!--  <div class="col-1 flex justify-center content-center q-ml-md">
+                <q-btn color="primary"    icon="mdi-table-column-plus-before" ></q-btn>
+              </div> -->
+
             </div>
 
             <div class="row q-ma-sm">
@@ -494,7 +494,7 @@ onMounted(() => {
                 <span class="variCLass">Observación</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
-              <div class="col-5">
+              <div class="col-6">
                 <q-input class="q-ml-md" type="textarea" outlined rounded> </q-input>
               </div>
             </div>
