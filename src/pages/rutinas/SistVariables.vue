@@ -487,7 +487,7 @@ onMounted(() => {
                 <q-icon color="primary" size="sm" name="mdi-content-copy"></q-icon>
               </div>
               <div class="col-2 flex justify-center content-center">
-                <span style="font-size: 12px; font-weight: 500; color: black">Copiar valor anterior</span>
+                <span style="font-size: 12px; font-weight: 500; color: black">Copiar Valor Anterior</span>
               </div>
             </div>
 
