@@ -423,7 +423,7 @@ const dataSist = (value) => {
         header-class="expansionClass"
       >
         <q-card flat>
-          <q-card-content>
+          <q-card-section>
             <q-table :rows="sistemas" :columns="columns" :pagination="pagination" :rows-key="sist.id" separator="horizontal">
               <template v-slot:header="props"
                 ><q-tr :props="props"
@@ -483,7 +483,7 @@ const dataSist = (value) => {
             </div>
           </template> -->
             </q-table>
-          </q-card-content>
+          </q-card-section>
         </q-card>
       </q-expansion-item>
     </div>

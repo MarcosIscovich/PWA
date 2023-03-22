@@ -17,6 +17,7 @@ const openPage = () => {
 };
 
 onMounted(() => {
+  menuDrawer.value = false;
   if (navigator.onLine) {
     console.log("Conectado a internet");
     systemOnline.value = true;
@@ -68,7 +69,7 @@ onMounted(() => {
 
         <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
           <q-list padding>
-            <q-item clickable v-ripple to="/rutine1">
+            <q-item clickable v-ripple to="/rutine1" @click="menuDrawer = !menuDrawer">
               <q-item-section avatar >
                 <q-icon name="inbox"  />
               </q-item-section>
@@ -78,7 +79,7 @@ onMounted(() => {
               </q-item-section>
             </q-item>
 
-            <q-item active clickable v-ripple to="/rutine2">
+            <q-item active clickable v-ripple to="/rutine2" @click="menuDrawer = !menuDrawer">
               <q-item-section avatar>
                 <q-icon name="star" />
               </q-item-section>
