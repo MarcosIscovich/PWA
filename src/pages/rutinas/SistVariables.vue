@@ -4,6 +4,7 @@ import { defineComponent, ref, onMounted, watch } from "vue";
 import { useRouter } from "vue-router";
 
 const $router = useRouter();
+const $q = useQuasar();
 
 const sistId = ref(null);
 const dialog = ref(false);
@@ -339,6 +340,21 @@ const backPage = () => {
   $router.push({ path: "/rutine2" });
 };
 
+const copyAnterior = (data) => {
+  console.log("DATA", data);
+  dataVar.value.medicion = data;
+  // $router.push({ path: "/medicion/" , query: { sistema:sistId.value ,  variable: data } });
+};
+
+const submit = () => {
+  dialog.value = false;
+  $q.dialog({
+    title: "Datos Guardados",
+    message: "Los datos se han guardado correctamente",
+    position: "bottom",
+  });
+};
+
 const openMedicion = (data) => {
   console.log("DATA", data);
   console.log("SISTEMA", sistId.value);
@@ -419,7 +435,7 @@ onMounted(() => {
           <q-card flat>
             <div class="row q-ma-sm">
               <div class="col-5">
-                <span class="variCLass flex justify-center"> Unidad de Medida</span>
+                <span class="variCLass flex justify-start"> Unidad de Medida</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
               <div class="col-5 q-ml-md">
@@ -432,7 +448,7 @@ onMounted(() => {
 
             <div class="row q-ma-sm">
               <div class="col-5">
-                <span class="variCLass flex justify-center">Valores Desde/Hasta</span>
+                <span class="variCLass flex justify-start">Valores Desde/Hasta</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
               <div class="col-5 q-ml-md">
@@ -445,7 +461,7 @@ onMounted(() => {
 
             <div class="row q-ma-sm">
               <div class="col-5">
-                <span class="variCLass flex justify-center">Valor Normal</span>
+                <span class="variCLass flex justify-start">Valor Normal</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
               <div class="col-5 q-ml-md">
@@ -458,23 +474,31 @@ onMounted(() => {
 
             <div class="row q-ma-sm">
               <div class="col-5">
-                <span class="variCLass flex justify-center">Valor Anterior</span>
+                <span class="variCLass flex justify-start">Valor Anterior</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
-              <div class="col-5 q-ml-md">
+              <div class="col-3 q-ml-md">
                 <q-chip size="xl">
                   <q-avatar class="avatarColor" text-color="white" icon="mdi-table-column-plus-before"></q-avatar>
                   <span class="variCLass"> {{ dataVar.valor_anterior }}</span>
                 </q-chip>
               </div>
+              <div class="flex" @click="copyAnterior(dataVar.valor_anterior)">
+                <div class="col-1 flex justify-center content-center">
+                  <q-icon size="sm" color="primary" name="mdi-content-copy"></q-icon>
+                </div>
+                <div class="col-2 flex justify-center content-center">
+                  <span style="font-size: 12px; color: black; font-weight: bold">Copiar a Medición</span>
+                </div>
+              </div>
             </div>
 
             <div class="row q-ma-sm">
               <div class="col-5">
-                <span class="variCLass flex justify-center">Medición</span>
+                <span class="variCLass flex justify-start">Medición</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
-              <div class="col-6">
+              <div class="col-4">
                 <q-input outlined v-model="dataVar.medicion" type="number" class="q-ml-md" rounded>
                   <template v-slot:append>
                     <q-avatar>
@@ -483,14 +507,13 @@ onMounted(() => {
                   </template>
                 </q-input>
               </div>
-             <!--  <div class="col-1 flex justify-center content-center q-ml-md">
+              <!--  <div class="col-1 flex justify-center content-center q-ml-md">
                 <q-btn color="primary"    icon="mdi-table-column-plus-before" ></q-btn>
               </div> -->
-
             </div>
 
             <div class="row q-ma-sm">
-              <div class="col-5 flex justify-center content-center">
+              <div class="col-5 flex justify-start content-center">
                 <span class="variCLass">Observación</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
@@ -501,12 +524,11 @@ onMounted(() => {
             <q-separator size="2px" color="blue" />
             <q-card-actions class="flex justify-around">
               <q-btn class="q-ma-sm btnColotAzul" label="Pendiente" @click="onDialogCancel" />
-              <q-btn class="q-ma-sm btnColotAzul" color="primary" label="Guardar" @click="onDialogCancel" />
+              <q-btn class="q-ma-sm btnColotAzul" color="primary" label="Guardar" @click="submit" />
             </q-card-actions>
           </q-card>
         </q-card-section>
       </q-card>
-
     </q-dialog>
   </q-responsive>
 </template>
