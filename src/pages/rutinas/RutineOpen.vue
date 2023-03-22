@@ -5,85 +5,86 @@ import { defineComponent, ref, onMounted } from "vue";
 const sistemas = ref([
   {
     id: 1,
-    Sistema: "Sector Recinto 1 de Sala 1",
+    nombreSist: "Sector Recinto 1 de Sala 1",
+    observacion: "qwerty",
     variables: [
       {
         variable: "variable 1",
-        parametro: "1",
-        par_desde: "",
-        par_hasta: "",
-        valor_anterior: "0",
+        unidad_medida: "mg",
+        desde_hasta: "5 / 10",
+        valor_normal: "7",
+        valor_anterior: "8",
         medicion: "",
         observacion: "qwerty",
       },
       {
         variable: "variable 2",
-        parametro: "2",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 3",
-        parametro: "3",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "m",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 4",
-        parametro: "4",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "N/R",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 5",
-        parametro: "5",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 6",
-        parametro: "6",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "m",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 7",
-        parametro: "7",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "l",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 8",
-        parametro: "8",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 9",
-        parametro: "9",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
@@ -92,58 +93,59 @@ const sistemas = ref([
   },
   {
     id: 2,
-    Sistema: "Sector recinto 1 de Piso3",
+    nombreSist: "Sector recinto 1 de Piso3",
+    observacion: "qwerty",
     variables: [
       {
         variable: "variable 1",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 2",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "N/R",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 3",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "m",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 4",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "cm",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 5",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 6",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "cm",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
@@ -152,171 +154,172 @@ const sistemas = ref([
   },
   {
     id: 3,
-    Sistema: "5211 Sala Electrica PAR",
+    nombreSist: "5211 Sala Electrica PAR",
+    observacion: "qwerty",
     variables: [
       {
         variable: "72213 V218 Abierta",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "72214 TK210 67221-TI236",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "72213-V617 Abierta",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "cm",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "65225-PT 205 AIRE DE ARRANQUE",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "cm",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
-
     ],
   },
   {
     id: 4,
-    Sistema: "5211 Sala Electrica IMPAR",
+    nombreSist: "5211 Sala Electrica IMPAR",
+    observacion: "qwerty",
     variables: [
       {
         variable: "72213 v118 ABIERTA",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "52253-V311 ABIERTA",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "cm",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
-
     ],
   },
   {
     id: 5,
-    Sistema: "52900-EPS",
+    nombreSist: "52900-EPS",
+    observacion: "qwerty",
     variables: [
       {
         variable: "52900-PL71 WN20 PRESENTE",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 2",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 3",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "cm",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 4",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "g",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 5",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "g",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 6",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 7",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "l",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 8",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "mg",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 9",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "m",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 10",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "cm",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
       },
       {
         variable: "variable 11",
-        parametro: "",
-        par_desde: "",
-        par_hasta: "",
+        unidad_medida: "m",
+        desde_hasta: "",
+        valor_normal: "0",
         valor_anterior: "0",
         medicion: "",
         observacion: "",
@@ -339,25 +342,9 @@ const columns = ref([
     headerStyle: "width: auto",
   },
   {
-    name: "parametro",
-    label: "Parametro",
-    field: "parametro",
-    align: "center",
-    sortable: true,
-    headerStyle: "width: 100px",
-  },
-  {
-    name: "par_desde",
-    label: "par desde",
-    field: "par_desde",
-    align: "center",
-    sortable: true,
-    headerStyle: "width: 100px",
-  },
-  {
-    name: "par_hasta",
-    label: "par hasta",
-    field: "par_hasta",
+    name: "desde_hasta",
+    label: "Valor desde - hasta",
+    field: "desde_hasta",
     align: "center",
     sortable: true,
     headerStyle: "width: 100px",
@@ -371,20 +358,28 @@ const columns = ref([
     headerStyle: "width: 100px",
   },
   {
-    name: "medicion",
-    label: "Medicion ",
-    field: "medicion",
+    name: "valor_normal",
+    label: "valor Normal",
+    field: "valor_normal",
     align: "center",
     sortable: true,
     headerStyle: "width: 100px",
   },
   {
+    name: "medicion",
+    label: "Medición ",
+    field: "medicion",
+    align: "center",
+    sortable: true,
+    headerStyle: "width: 100px",
+  },
+  /*  {
     name: "observacion",
-    label: "Observacion",
+    label: "Observación",
     field: "observacion",
     align: "left",
     sortable: true,
-  },
+  }, */
   {
     name: "acciones",
     label: "Acciones",
@@ -419,7 +414,7 @@ const dataSist = (value) => {
         class="bg-grey-1 text-black q-mb-sm q-pa-sm rounded-borders shadow-2 hover-shadow-3"
         group="somegroup"
         icon="mdi-facebook-workplace"
-        :label="sist.Sistema"
+        :label="sist.nombreSist"
         header-class="expansionClass"
       >
         <q-card flat>
@@ -431,7 +426,7 @@ const dataSist = (value) => {
                 >
               </template>
               <template v-slot:body="props">
-                <template v-if="sist.Sistema == props.row.Sistema">
+                <template v-if="sist.nombreSist == props.row.nombreSist">
                   <q-tr v-for="(col, idx) in props.row.variables" :key="idx">
                     <q-td v-for="(colTd, idx) in props.cols" :key="idx">
                       <div v-if="colTd.name == 'variable'">
@@ -440,29 +435,59 @@ const dataSist = (value) => {
                           <span class="q-ml-sm">{{ col.variable }}</span>
                         </q-chip>
                       </div>
-                      <div v-if="colTd.name == 'parametro'">
-                        {{ col.parametro }}
-                      </div>
-                      <div v-if="colTd.name == 'par_desde'">
-                        {{ col.par_desde }}
-                      </div>
-                      <div v-if="colTd.name == 'par_hasta'">
-                        {{ col.par_hasta }}
+                      <div v-if="colTd.name == 'desde_hasta'">
+                        {{ col.desde_hasta }}
                       </div>
                       <div v-if="colTd.name == 'valor_anterior'">
                         {{ col.valor_anterior }}
                       </div>
+
+                      <div v-if="colTd.name == 'valor_normal'">
+                        {{ col.valor_normal }}
+                      </div>
                       <div v-if="colTd.name == 'medicion'">
                         <q-input outlined style="width: 80px" dense type="number" color="positive" v-model="col.medicion" />
                       </div>
-                      <div v-if="colTd.name == 'observacion'">
-                        {{ col?.observacion ? col?.observacion : 'click para agregar observación' }}
-                        <q-popup-edit buttons v-model="col.observacion" v-slot="scope">
-                          <q-input outlined style="width: 100px" dense type="textarea" color="positive" v-model="scope.value" />
+                      <!-- <div v-if="colTd.name == 'observacion'">
+                        {{ col?.variable?.observacion ? col?.variable?.observacion : 'click para agregar observación' }}
+                        <q-popup-edit buttons v-model="col.variable.observacion" v-slot="scope">
+                          <q-input outlined style="width: auto" dense type="textarea" color="positive" v-model="scope.value" />
                         </q-popup-edit>
-                      </div>
+                      </div> -->
                       <div v-if="colTd.name == 'acciones'">
-                        <q-icon name="mdi-plus-box-multiple" color="positive" size="32px" @click="dataSist(col)" />
+                        <q-icon size="xl" name="mdi-dots-horizontal" color="black" label="Flip Menu">
+                          <q-menu transition-show="flip-right" transition-hide="flip-left">
+                            <q-list style="min-width: auto">
+                              <q-item clickable>
+                                <div class="flex content-center">
+                                  <q-icon size="sm" name="mdi-pencil" class="q-mr-sm" color="orange" />
+                                </div>
+
+                                <q-separator vertical></q-separator>
+                                <span class="q-ml-sm flex justify-center content-center accionClass">Editar</span>
+                              </q-item>
+
+                              <q-item clickable>
+                                <div class="flex content-center">
+                                  <q-icon size="sm" name="mdi-plus" class="q-mr-sm" color="green" />
+                                </div>
+
+                                <q-separator vertical></q-separator>
+                                <span class="q-ml-sm flex justify-center content-center accionClass">Guardar</span>
+                              </q-item>
+
+                              <q-item clickable>
+                                <div class="flex content-center">
+                                  <q-icon size="sm" name="mdi-clock-alert-outline" class="q-mr-sm" color="brown" />
+                                </div>
+
+                                <q-separator vertical></q-separator>
+                                <span class="q-ml-sm flex justify-center content-center accionClass">Pendiente</span>
+                              </q-item>
+                            </q-list>
+                          </q-menu>
+                        </q-icon>
+                        <!-- <q-icon name="mdi-plus-box-multiple" color="positive" size="32px" @click="dataSist(col)" /> -->
                       </div>
                     </q-td>
                   </q-tr>
@@ -510,6 +535,11 @@ const dataSist = (value) => {
 
 .expansionClass {
   font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+.accionClass {
+  font-size: 14px;
   font-weight: bold;
   color: black;
 }
