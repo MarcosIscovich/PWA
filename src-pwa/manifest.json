@@ -6,6 +6,11 @@
   "display": "standalone",
   "start_url": "/",
   "orientation": "any",
+  "screen_orientation": {
+    "default": "portrait",
+    "allowUpsideDown": true
+
+  },
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "icons": [
