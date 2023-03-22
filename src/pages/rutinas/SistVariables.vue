@@ -474,7 +474,7 @@ onMounted(() => {
                 <span class="variCLass flex justify-center">Medición</span>
               </div>
               <q-separator vertical size="2px" color="blue" />
-              <div class="col-3">
+              <div class="col-5">
                 <q-input outlined v-model="dataVar.medicion" type="number" class="q-ml-md" rounded>
                   <template v-slot:append>
                     <q-avatar>
@@ -486,9 +486,7 @@ onMounted(() => {
               <div class="col-1 flex justify-center content-center q-ml-md">
                 <q-icon color="primary" size="sm" name="mdi-content-copy"></q-icon>
               </div>
-              <div class="col-2 flex justify-center content-center">
-                <span style="font-size: 12px; font-weight: 500; color: black">Copiar Valor Anterior</span>
-              </div>
+              
             </div>
 
             <div class="row q-ma-sm">
