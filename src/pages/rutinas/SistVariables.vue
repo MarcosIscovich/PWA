@@ -512,9 +512,12 @@ onMounted(() => {
               </div> -->
             </div>
 
-            <div class="row q-ma-sm">
-              <div class="col-5 flex justify-start content-center">
-                <span class="variCLass">Observación</span>
+            <div class="row q-ma-sm ">
+              <div class="col-5 flex ">
+                <div class="flex">
+                  <span class="variCLass ">Observación</span>
+                </div>
+
               </div>
               <q-separator vertical size="2px" color="blue" />
               <div class="col-6">
