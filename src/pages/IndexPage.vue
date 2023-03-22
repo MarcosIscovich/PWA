@@ -337,7 +337,7 @@ onMounted(() => {
 
         <div class="row">
           <div class="col flex justify-center">
-            <q-btn @click="openrutine.value = true" color="secondary" label="Ir a Rutina" />
+            <q-btn to="/rutine" color="secondary" label="Ir a Rutina" />
           </div>
         </div>
 

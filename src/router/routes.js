@@ -5,7 +5,18 @@ const routes = [
     children: [
       { path: "", component: () => import("pages/IndexPage.vue") },
       { path: "/newcomponente", component: () => import("../pages/newComponente.vue") },
-      { path: "/rutine", component: () => import("../pages/rutinas/NewRutine.vue") },
+      { path: "/rutine1", component: () => import("../pages/rutinas/RutineOpen.vue") },
+      { path: "/rutine2", component: () => import("../pages/rutinas/RutineOpen2.vue") },
+      {
+        path: "/variables/:id",
+        component: () => import("../pages/rutinas/SistVariables.vue"),
+
+      },
+      {
+        path: "/medicion",
+        component: () => import("../pages/rutinas/NewMedicion.vue"),
+
+      }
     ],
   },
   {

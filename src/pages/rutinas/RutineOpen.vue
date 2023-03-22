@@ -1,0 +1,516 @@
+<script setup>
+import { useQuasar } from "quasar";
+import { defineComponent, ref, onMounted } from "vue";
+
+const sistemas = ref([
+  {
+    id: 1,
+    Sistema: "Sector Recinto 1 de Sala 1",
+    variables: [
+      {
+        variable: "variable 1",
+        parametro: "1",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "qwerty",
+      },
+      {
+        variable: "variable 2",
+        parametro: "2",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 3",
+        parametro: "3",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 4",
+        parametro: "4",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 5",
+        parametro: "5",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 6",
+        parametro: "6",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 7",
+        parametro: "7",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 8",
+        parametro: "8",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 9",
+        parametro: "9",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+    ],
+  },
+  {
+    id: 2,
+    Sistema: "Sector recinto 1 de Piso3",
+    variables: [
+      {
+        variable: "variable 1",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 2",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 3",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 4",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 5",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 6",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+    ],
+  },
+  {
+    id: 3,
+    Sistema: "5211 Sala Electrica PAR",
+    variables: [
+      {
+        variable: "72213 V218 Abierta",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "72214 TK210 67221-TI236",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "72213-V617 Abierta",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "65225-PT 205 AIRE DE ARRANQUE",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+
+    ],
+  },
+  {
+    id: 4,
+    Sistema: "5211 Sala Electrica IMPAR",
+    variables: [
+      {
+        variable: "72213 v118 ABIERTA",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "52253-V311 ABIERTA",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+
+    ],
+  },
+  {
+    id: 5,
+    Sistema: "52900-EPS",
+    variables: [
+      {
+        variable: "52900-PL71 WN20 PRESENTE",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 2",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 3",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 4",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 5",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 6",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 7",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 8",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 9",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 10",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+      {
+        variable: "variable 11",
+        parametro: "",
+        par_desde: "",
+        par_hasta: "",
+        valor_anterior: "0",
+        medicion: "",
+        observacion: "",
+      },
+    ],
+  },
+]);
+const $q = useQuasar();
+
+const pagination = ref({
+  rowsPerPage: 0,
+});
+const columns = ref([
+  {
+    name: "variable",
+    label: "Variable",
+    field: "",
+    align: "center",
+    sortable: true,
+    headerStyle: "width: auto",
+  },
+  {
+    name: "parametro",
+    label: "Parametro",
+    field: "parametro",
+    align: "center",
+    sortable: true,
+    headerStyle: "width: 100px",
+  },
+  {
+    name: "par_desde",
+    label: "par desde",
+    field: "par_desde",
+    align: "center",
+    sortable: true,
+    headerStyle: "width: 100px",
+  },
+  {
+    name: "par_hasta",
+    label: "par hasta",
+    field: "par_hasta",
+    align: "center",
+    sortable: true,
+    headerStyle: "width: 100px",
+  },
+  {
+    name: "valor_anterior",
+    label: "valor anterior",
+    field: "valor_anterior",
+    align: "center",
+    sortable: true,
+    headerStyle: "width: 100px",
+  },
+  {
+    name: "medicion",
+    label: "Medicion ",
+    field: "medicion",
+    align: "center",
+    sortable: true,
+    headerStyle: "width: 100px",
+  },
+  {
+    name: "observacion",
+    label: "Observacion",
+    field: "observacion",
+    align: "left",
+    sortable: true,
+  },
+  {
+    name: "acciones",
+    label: "Acciones",
+    field: "acciones",
+    align: "left",
+    sortable: true,
+  },
+]);
+const valorMedicion = ref({
+  variable: "",
+  parametro: "",
+  par_desde: "",
+  par_hasta: "",
+  valor_anterior: "",
+  medicion: "",
+  observacion: "",
+});
+
+const dataSist = (value) => {
+  console.log(value);
+};
+</script>
+<template>
+  <q-responsive :ratio="1">
+    <div class="q-pa-sm">
+      <div class="flex justify-center q-mt-sm q-mb-md">
+        <span class="titleClass">Rutina Exteriores</span>
+      </div>
+      <q-expansion-item
+        v-for="sist in sistemas"
+        :key="sist.id"
+        class="bg-grey-1 text-black q-mb-sm q-pa-sm rounded-borders shadow-2 hover-shadow-3"
+        group="somegroup"
+        icon="mdi-facebook-workplace"
+        :label="sist.Sistema"
+        header-class="expansionClass"
+      >
+        <q-card flat>
+          <q-card-content>
+            <q-table :rows="sistemas" :columns="columns" :pagination="pagination" :rows-key="sist.id" separator="horizontal">
+              <template v-slot:header="props"
+                ><q-tr :props="props"
+                  ><q-th v-for="col in props.cols" :key="col.name" :props="props" class="headerClass"> {{ col.label }}</q-th></q-tr
+                >
+              </template>
+              <template v-slot:body="props">
+                <template v-if="sist.Sistema == props.row.Sistema">
+                  <q-tr v-for="(col, idx) in props.row.variables" :key="idx">
+                    <q-td v-for="(colTd, idx) in props.cols" :key="idx">
+                      <div v-if="colTd.name == 'variable'">
+                        <q-chip class="chipClass" text-color="white">
+                          <q-icon name="mdi-atom-variant" color="black" size="sm"></q-icon>
+                          <span class="q-ml-sm">{{ col.variable }}</span>
+                        </q-chip>
+                      </div>
+                      <div v-if="colTd.name == 'parametro'">
+                        {{ col.parametro }}
+                      </div>
+                      <div v-if="colTd.name == 'par_desde'">
+                        {{ col.par_desde }}
+                      </div>
+                      <div v-if="colTd.name == 'par_hasta'">
+                        {{ col.par_hasta }}
+                      </div>
+                      <div v-if="colTd.name == 'valor_anterior'">
+                        {{ col.valor_anterior }}
+                      </div>
+                      <div v-if="colTd.name == 'medicion'">
+                        <q-input outlined style="width: 80px" dense type="number" color="positive" v-model="col.medicion" />
+                      </div>
+                      <div v-if="colTd.name == 'observacion'">
+                        {{ col?.observacion ? col?.observacion : 'click para agregar observación' }}
+                        <q-popup-edit buttons v-model="col.observacion" v-slot="scope">
+                          <q-input outlined style="width: 100px" dense type="textarea" color="positive" v-model="scope.value" />
+                        </q-popup-edit>
+                      </div>
+                      <div v-if="colTd.name == 'acciones'">
+                        <q-icon name="mdi-plus-box-multiple" color="positive" size="32px" @click="dataSist(col)" />
+                      </div>
+                    </q-td>
+                  </q-tr>
+                </template>
+              </template>
+
+              <!--  <template v-slot:body-cell-medicion="{ row }">
+            <div class="row q-mt-sm">
+              <div class="col flex justify-center">
+                <q-input outlined style="width: 50px" type="number" color="positive" v-model="row.medicion" />
+              </div>
+            </div>
+          </template>
+          <template v-slot:body-cell-acciones="row">
+            <div :props="row">
+              <q-btn icon="font_download" color="primary" size="32px" />
+              <q-icon name="font_download" color="primary" size="32px" />
+            </div>
+          </template> -->
+            </q-table>
+          </q-card-content>
+        </q-card>
+      </q-expansion-item>
+    </div>
+  </q-responsive>
+</template>
+
+<style lang="scss">
+.titleClass {
+  font-size: 20px;
+  font-weight: bold;
+  color: $nasaNar;
+}
+
+.headerClass {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: $nasaAzul !important;
+}
+
+.chipClass {
+  background: $nasaNar !important;
+}
+
+.expansionClass {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+</style>
