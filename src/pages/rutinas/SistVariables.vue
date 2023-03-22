@@ -619,7 +619,6 @@ onMounted(() => {
   padding:  15px;
   padding-left: 0px;
 }
-
 .iconClass {
   color: $nasaAzul;
 }
