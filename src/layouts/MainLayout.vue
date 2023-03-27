@@ -51,7 +51,7 @@ onMounted(() => {
           </q-fab>
         </div> -->
         <q-btn flat @click="menuDrawer = !menuDrawer" round dense icon="menu" />
-        
+
         <q-toolbar-title>Mediciones </q-toolbar-title>
 
         <div>
@@ -76,7 +76,7 @@ onMounted(() => {
               </q-item-section>
 
               <q-item-section>
-                Rutina 1
+                Dashboard Admin
               </q-item-section>
             </q-item>
 
@@ -86,7 +86,7 @@ onMounted(() => {
               </q-item-section>
 
               <q-item-section>
-                Rutina 2
+                Rutina en tablet
               </q-item-section>
             </q-item>
 
