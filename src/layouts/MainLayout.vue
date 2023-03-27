@@ -86,7 +86,7 @@ onMounted(() => {
               </q-item-section>
 
               <q-item-section>
-                Rutina en tablet
+                Rutina en Tablet
               </q-item-section>
             </q-item>
 
