@@ -9,6 +9,7 @@ const $q = useQuasar();
 const sistId = ref(null);
 const dialog = ref(false);
 const dataVar = ref("");
+const varReady = ref(false);
 
 const sistemas = ref([
   {
@@ -25,6 +26,8 @@ const sistemas = ref([
         valor_anterior: "",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTC66CP001",
@@ -35,6 +38,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTC66AA010 (abierta)",
@@ -45,6 +50,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTC66EE001 (auto)",
@@ -55,6 +62,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTC66EE002",
@@ -65,6 +74,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTB01CP001",
@@ -75,6 +86,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTB02CP001",
@@ -85,6 +98,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTB03CP001",
@@ -95,6 +110,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTB04CP001",
@@ -105,6 +122,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTF20Cl001XG01",
@@ -115,6 +134,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTF20Cl002XG01",
@@ -125,6 +146,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTF00EG001ZV01",
@@ -135,6 +158,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "JEW10CF001A",
@@ -145,6 +170,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "JEW11CF001A",
@@ -155,6 +182,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTA01CF001",
@@ -165,6 +194,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "JEC12CP810A",
@@ -175,6 +206,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "JEW20CF001A",
@@ -185,6 +218,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "JEW21CF001A",
@@ -195,6 +230,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KTA02Cf001",
@@ -205,6 +242,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "JEC22CP831A",
@@ -215,6 +254,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "JEW11AA501",
@@ -225,6 +266,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KAB71AA501",
@@ -235,6 +278,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "KAB71AA502",
@@ -245,6 +290,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
     ],
   },
@@ -262,6 +309,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RL52D001",
@@ -272,6 +321,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RL53D001",
@@ -282,6 +333,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RR51P001",
@@ -292,6 +345,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RR52P001",
@@ -302,6 +357,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RR51L005",
@@ -312,6 +369,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RR52L005",
@@ -322,6 +381,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RV Rl11P001",
@@ -332,6 +393,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RV Rl12P001",
@@ -342,6 +405,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RL11S005",
@@ -352,6 +417,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RL12S005",
@@ -362,6 +429,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RV QW01L001",
@@ -372,6 +441,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RV QW02L001",
@@ -382,6 +453,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "UU04P001",
@@ -392,6 +465,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "SC17S026",
@@ -402,6 +477,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "SC22P001",
@@ -412,6 +489,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "SOBR.BY",
@@ -422,6 +501,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "ERROR REG PRES",
@@ -432,6 +513,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RA03P004-AP",
@@ -442,6 +525,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RV RL11L001",
@@ -452,6 +537,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "RL11T006",
@@ -462,6 +549,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "SG10P011",
@@ -472,6 +561,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
       {
         variable: "SD11L012",
@@ -482,6 +573,8 @@ const sistemas = ref([
         valor_anterior: "0",
         medicion: "",
         observacion: "",
+        ready :"",
+        alert :"",
       },
     ],
   },
@@ -671,8 +764,19 @@ const copyAnterior = (data) => {
   // $router.push({ path: "/medicion/" , query: { sistema:sistId.value ,  variable: data } });
 };
 
-const submit = () => {
+const submit = (data) => {
+  console.log("DATA", data);
   dialog.value = false;
+  varReady.value = true;
+  sistemas.value.forEach((sistema) => {
+    sistema.variables.forEach((variable) => {
+      if (variable.variable == data) {
+        console.log("entro");
+        variable.ready = "true"
+      }
+    });
+    });
+    console.log("SISTEMAS", sistemas.value);
   $q.dialog({
     title: "Datos Guardados",
     message: "Los datos se han guardado correctamente",
@@ -711,8 +815,8 @@ onMounted(() => {
         <div class="row" v-if="vari.id == sistId">
           <div v-for="variable in vari.variables" :key="variable">
             <q-card class="varClass q-ma-sm q-gutter-md" @click="openMedicion(variable)">
-              <q-card-section class="q-ma-none">
-                <div class="text-h6">{{ variable.variable }} <q-icon class="q-ml-md" size="md" name="mdi-menu-right"></q-icon></div>
+              <q-card-section :class="variable.ready == 'true' ?  'q-ma-none bg-green-3 ': 'q-ma-none' ">
+                <div class="text-h6">{{ variable.variable }} <q-icon class="q-ml-md" size="md" name="mdi-menu-right"></q-icon> {{ variable.variable.ready }}</div>
               </q-card-section>
             </q-card>
           </div>
@@ -855,7 +959,7 @@ onMounted(() => {
             <q-separator size="2px" color="blue" />
             <q-card-actions class="flex justify-around">
               <q-btn class="q-ma-sm btnColotAzul" label="Pendiente" @click="onDialogCancel" />
-              <q-btn class="q-ma-sm btnColotAzul" color="primary" label="Guardar" @click="submit" />
+              <q-btn class="q-ma-sm btnColotAzul" color="primary" label="Guardar" @click="submit(dataVar.variable)" />
             </q-card-actions>
           </q-card>
         </q-card-section>
