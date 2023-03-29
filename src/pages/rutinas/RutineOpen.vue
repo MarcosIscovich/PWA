@@ -243,7 +243,7 @@ const sistemas = ref([
   {
     id: 2,
     nombreSist: "Sistema Secundario",
-    observacion: "qwerty",
+    observacion: "esta es una observación",
     variables: [
       {
         variable: "RL51D001",
@@ -480,7 +480,7 @@ const sistemas = ref([
   {
     id: 3,
     nombreSist: "5211 Sala Electrica PAR",
-    observacion: "qwerty",
+    observacion: "esta es una observación",
     variables: [
       {
         variable: "72213 V218 Abierta",
@@ -523,7 +523,7 @@ const sistemas = ref([
   {
     id: 4,
     nombreSist: "5211 Sala Electrica IMPAR",
-    observacion: "qwerty",
+    observacion: "esta es una observación",
     variables: [
       {
         variable: "72213 v118 ABIERTA",
@@ -548,7 +548,7 @@ const sistemas = ref([
   {
     id: 5,
     nombreSist: "52900-EPS",
-    observacion: "qwerty",
+    observacion: "esta es una observación",
     variables: [
       {
         variable: "52900-PL71 WN20 PRESENTE",

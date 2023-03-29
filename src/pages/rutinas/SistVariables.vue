@@ -68,6 +68,7 @@ const sistemas = ref([
       },
       {
         variable: "KTB01CP001",
+        descripcion: "Vacio de estator JFB10AP001",
         unidad_medida: "bar",
         desde_hasta: "-1 / -0.8",
         valor_normal: "0",
@@ -77,6 +78,7 @@ const sistemas = ref([
       },
       {
         variable: "KTB02CP001",
+        descripcion: "Vacio de estator JFB20AP001",
         unidad_medida: "bar",
         desde_hasta: "-1 / -0.8",
         valor_normal: "0",
@@ -86,6 +88,7 @@ const sistemas = ref([
       },
       {
         variable: "KTB03CP001",
+        descripcion: "Vacio de estator JFB30AP001",
         unidad_medida: "bar",
         desde_hasta: "-1 / -0.8",
         valor_normal: "0",
@@ -95,6 +98,7 @@ const sistemas = ref([
       },
       {
         variable: "KTB04CP001",
+        descripcion: "Vacio de estator JFB40AP001",
         unidad_medida: "bar",
         desde_hasta: "-1 / -0.8",
         valor_normal: "0",
@@ -104,6 +108,7 @@ const sistemas = ref([
       },
       {
         variable: "KTF20Cl001XG01",
+        descripcion: "Alarma de 'KTF20BB001 L > MIN'",
         unidad_medida: "si / no",
         desde_hasta: "si / no",
         valor_normal: "0",
@@ -113,6 +118,7 @@ const sistemas = ref([
       },
       {
         variable: "KTF20Cl002XG01",
+        descripcion: "Alarma liquido en KTF20BR001",
         unidad_medida: "si / no",
         desde_hasta: "si / no",
         valor_normal: "0",
@@ -122,6 +128,7 @@ const sistemas = ref([
       },
       {
         variable: "KTF00EG001ZV01",
+        descripcion : "Alarma colectiva sumuderos de UJA (L>MAX)",
         unidad_medida: "si / no",
         desde_hasta: "si / no",
         valor_normal: "0",
@@ -131,6 +138,7 @@ const sistemas = ref([
       },
       {
         variable: "JEW10CF001A",
+        descripcion : "Caudal agua de sello JFB10AP001",
         unidad_medida: "kg/s",
         desde_hasta: "0 / 0.2",
         valor_normal: "0",
@@ -140,6 +148,7 @@ const sistemas = ref([
       },
       {
         variable: "JEW11CF001A",
+        descripcion : "C .de perdida del sello de presión",
         unidad_medida: "kg/s",
         desde_hasta: "0.31 / 0.8",
         valor_normal: "0",
@@ -149,6 +158,7 @@ const sistemas = ref([
       },
       {
         variable: "KTA01CF001",
+        descripcion : "C. de perdida del sello de presión",
         unidad_medida: "kg/h",
         desde_hasta: "0 / 5",
         valor_normal: "0",
@@ -158,6 +168,7 @@ const sistemas = ref([
       },
       {
         variable: "JEC12CP810A",
+        descripcion : "Presión diferencial JFB10AP001",
         unidad_medida: "bar",
         desde_hasta: "0 / 15",
         valor_normal: "0",
@@ -167,6 +178,7 @@ const sistemas = ref([
       },
       {
         variable: "JEW20CF001A",
+        descripcion : "Caudak agua de sello JFB20AP001",
         unidad_medida: "kg/s",
         desde_hasta: "0 / 0.2",
         valor_normal: "0",
@@ -176,6 +188,7 @@ const sistemas = ref([
       },
       {
         variable: "JEW21CF001A",
+        descripcion : "c. de perdida del sello de alta presión",
         unidad_medida: "kg/s",
         desde_hasta: "0.31 / 0.8",
         valor_normal: "0",
@@ -185,6 +198,7 @@ const sistemas = ref([
       },
       {
         variable: "KTA02Cf001",
+        descripcion : "C. de perdida del sello de baja presión",
         unidad_medida: "kg/h",
         desde_hasta: "0 / 5",
         valor_normal: "0",
@@ -194,6 +208,7 @@ const sistemas = ref([
       },
       {
         variable: "JEC22CP831A",
+        descripcion : "Presion diferencial JFB20AP001",
         unidad_medida: "bar",
         desde_hasta: "0 / 15",
         valor_normal: "0",
@@ -203,6 +218,7 @@ const sistemas = ref([
       },
       {
         variable: "JEW11AA501",
+        descripcion : "Posición valvula reg. agua de sello",
         unidad_medida: "%",
         desde_hasta: "0 / 100",
         valor_normal: "0",
@@ -212,6 +228,7 @@ const sistemas = ref([
       },
       {
         variable: "KAB71AA501",
+        descripcion : "Posicion valvula reg. de temperatura de JEB10AP003/004",
         unidad_medida: "%",
         desde_hasta: "0 / 100",
         valor_normal: "0",
@@ -221,6 +238,7 @@ const sistemas = ref([
       },
       {
         variable: "KAB71AA502",
+        descripcion : "Posicion valvula reg. de temperatura de JEB10BC020",
         unidad_medida: "%",
         desde_hasta: "0 / 100",
         valor_normal: "0",
@@ -233,10 +251,11 @@ const sistemas = ref([
   {
     id: 2,
     nombreSist: "Sistema Secundario",
-    observacion: "qwerty",
+    observacion: "esta es una observación",
     variables: [
       {
         variable: "RL51D001",
+        descripcion : "Carga de bomba RL51D001",
         unidad_medida: "%",
         desde_hasta: " 0 / 120",
         valor_normal: "0",
@@ -246,6 +265,7 @@ const sistemas = ref([
       },
       {
         variable: "RL52D001",
+        descripcion : "Carga de bomba RL52D001",
         unidad_medida: "%",
         desde_hasta: " 0 / 120",
         valor_normal: "0",
@@ -255,6 +275,7 @@ const sistemas = ref([
       },
       {
         variable: "RL53D001",
+        descripcion : "Carga de bomba RL53D001",
         unidad_medida: "%",
         desde_hasta: " 0 / 120",
         valor_normal: "0",
@@ -264,6 +285,7 @@ const sistemas = ref([
       },
       {
         variable: "RR51P001",
+        descripcion : "Presión en el recipiente para el mantenimiento de la presión",
         unidad_medida: "ata ",
         desde_hasta: "0 / 100",
         valor_normal: "0",
@@ -273,6 +295,7 @@ const sistemas = ref([
       },
       {
         variable: "RR52P001",
+        descripcion : "Presión en el recipiente para el mantenimiento de la presión",
         unidad_medida: "ata ",
         desde_hasta: "0 / 100",
         valor_normal: "0",
@@ -282,6 +305,7 @@ const sistemas = ref([
       },
       {
         variable: "RR51L005",
+        descripcion : "Nivel del recipiente para el mantenimiento de la presión",
         unidad_medida: "cm",
         desde_hasta: "0 / 100",
         valor_normal: "0",
@@ -291,6 +315,7 @@ const sistemas = ref([
       },
       {
         variable: "RR52L005",
+        descripcion : "Nivel del recipiente para el mantenimiento de la presión",
         unidad_medida: "cm",
         desde_hasta: "0 / 100",
         valor_normal: "0",
@@ -300,6 +325,7 @@ const sistemas = ref([
       },
       {
         variable: "RV Rl11P001",
+        descripcion : "Refrigerador moderador 1-presion agua de alimentación",
         unidad_medida: "ate",
         desde_hasta: "5 / 100",
         valor_normal: "0",
@@ -309,6 +335,7 @@ const sistemas = ref([
       },
       {
         variable: "RV Rl12P001",
+        descripcion : "Refrigerador moderador 2-presion agua de alimentación",
         unidad_medida: "ate",
         desde_hasta: "5 / 100",
         valor_normal: "0",
@@ -318,6 +345,7 @@ const sistemas = ref([
       },
       {
         variable: "RL11S005",
+        descripcion : "Indicación de apertura",
         unidad_medida: "%",
         desde_hasta: "0 / 100",
         valor_normal: "0",
@@ -327,6 +355,7 @@ const sistemas = ref([
       },
       {
         variable: "RL12S005",
+        descripcion : "Indicación de apertura",
         unidad_medida: "%",
         desde_hasta: "0 / 100",
         valor_normal: "0",
@@ -336,6 +365,7 @@ const sistemas = ref([
       },
       {
         variable: "RV QW01L001",
+        descripcion : "Nivel de los generadores de vapor",
         unidad_medida: "m",
         desde_hasta: "0.7 / 8.56",
         valor_normal: "0",
@@ -345,6 +375,7 @@ const sistemas = ref([
       },
       {
         variable: "RV QW02L001",
+        descripcion : "Nivel de los generadores de vapor",
         unidad_medida: "m",
         desde_hasta: "0.7 / 8.56",
         valor_normal: "0",
@@ -354,6 +385,7 @@ const sistemas = ref([
       },
       {
         variable: "UU04P001",
+        descripcion : "Presión colector",
         unidad_medida: "ate",
         desde_hasta: "0 / 10",
         valor_normal: "0",
@@ -363,6 +395,7 @@ const sistemas = ref([
       },
       {
         variable: "SC17S026",
+        descripcion : "Válvula reguladora",
         unidad_medida: "%",
         desde_hasta: "0 / 100",
         valor_normal: "0",
@@ -372,6 +405,7 @@ const sistemas = ref([
       },
       {
         variable: "SC22P001",
+        descripcion : "presión aceite auxiliar secundario",
         unidad_medida: "ate",
         desde_hasta: "0 / 6",
         valor_normal: "0",
@@ -381,6 +415,7 @@ const sistemas = ref([
       },
       {
         variable: "SOBR.BY",
+        descripcion : "presión de sobrecarga del by-pass",
         unidad_medida: "kg/cm2",
         desde_hasta: "-20 / 20",
         valor_normal: "0",
@@ -390,6 +425,7 @@ const sistemas = ref([
       },
       {
         variable: "ERROR REG PRES",
+        descripcion : "Error de regulacion de presión",
         unidad_medida: "kg/cm2",
         desde_hasta: "-10 / 10",
         valor_normal: "0",
@@ -399,6 +435,7 @@ const sistemas = ref([
       },
       {
         variable: "RA03P004-AP",
+        descripcion : "Delta P entre ramales de vapor vivo",
         unidad_medida: "kg/cm2",
         desde_hasta: "-10 / 10",
         valor_normal: "0",
@@ -408,6 +445,7 @@ const sistemas = ref([
       },
       {
         variable: "RV RL11L001",
+        descripcion : "Nivel del tanque de agua de alimentación",
         unidad_medida: "m",
         desde_hasta: "1 / 2.2",
         valor_normal: "0",
@@ -417,6 +455,7 @@ const sistemas = ref([
       },
       {
         variable: "RL11T006",
+        descripcion : "Temperatura tanque de agua de alimentación",
         unidad_medida: "°C",
         desde_hasta: "0 / 300",
         valor_normal: "0",
@@ -426,6 +465,7 @@ const sistemas = ref([
       },
       {
         variable: "SG10P011",
+        descripcion : "Presión de vapor de sellos",
         unidad_medida: "mmca",
         desde_hasta: "70 / 100",
         valor_normal: "0",
@@ -435,6 +475,7 @@ const sistemas = ref([
       },
       {
         variable: "SD11L012",
+        descripcion : "Nivel del condensador",
         unidad_medida: "m",
         desde_hasta: "1 / 2",
         valor_normal: "0",
@@ -447,7 +488,7 @@ const sistemas = ref([
   {
     id: 3,
     nombreSist: "5211 Sala Electrica PAR",
-    observacion: "qwerty",
+    observacion: "esta es una observación",
     variables: [
       {
         variable: "72213 V218 Abierta",
@@ -490,7 +531,7 @@ const sistemas = ref([
   {
     id: 4,
     nombreSist: "5211 Sala Electrica IMPAR",
-    observacion: "qwerty",
+    observacion: "esta es una observación",
     variables: [
       {
         variable: "72213 v118 ABIERTA",
@@ -515,7 +556,7 @@ const sistemas = ref([
   {
     id: 5,
     nombreSist: "52900-EPS",
-    observacion: "qwerty",
+    observacion: "esta es una observación",
     variables: [
       {
         variable: "52900-PL71 WN20 PRESENTE",
